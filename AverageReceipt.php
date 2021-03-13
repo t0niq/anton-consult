@@ -57,7 +57,7 @@ class AverageReceipt extends Model
 
     public function addSumWhenSingle(Service $service): bool
     {
-        if($this->services->contains($service) && $this->services->find($service)->pivot->addSumWhenSingle) {
+        if ($this->services->contains($service) && $this->services->find($service)->pivot->addSumWhenSingle) {
             return true;
         }
         return false;
@@ -65,7 +65,7 @@ class AverageReceipt extends Model
 
     public function addCountWhenSingle(Service $service): bool
     {
-        if($this->services->contains($service) && $this->services->find($service)->pivot->addCountWhenSingle) {
+        if ($this->services->contains($service) && $this->services->find($service)->pivot->addCountWhenSingle) {
             return true;
         }
         return false;
@@ -73,7 +73,7 @@ class AverageReceipt extends Model
 
     public function addSumWhenMany(Service $service): bool
     {
-        if($this->services->contains($service) && $this->services->find($service)->pivot->addSumWhenMany) {
+        if ($this->services->contains($service) && $this->services->find($service)->pivot->addSumWhenMany) {
             return true;
         }
         return false;
@@ -81,7 +81,7 @@ class AverageReceipt extends Model
 
     public function addCountWhenMany(Service $service): bool
     {
-        if($this->services->contains($service) && $this->services->find($service)->pivot->addCountWhenMany) {
+        if ($this->services->contains($service) && $this->services->find($service)->pivot->addCountWhenMany) {
             return true;
         }
         return false;
@@ -89,7 +89,7 @@ class AverageReceipt extends Model
 
     public function updateServicesSettings(array $services)
     {
-        foreach($services as $id => $params) {
+        foreach ($services as $id => $params) {
             $this->updateServiceParams($id, $params);
         }
     }
